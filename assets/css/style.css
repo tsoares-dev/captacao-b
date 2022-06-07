@@ -1,68 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-* { box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 body {
-   margin: 0;
-   padding: 0;
-   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 .main {
-  background-color: #1D2437;
-  background-image: url("../images/bg.png");
+  background-color: #1d2437;
+  background-image: url('../images/bg.png');
+  background-size: cover;
 }
 .container {
-   max-width: 1070px; /*largura máxima do container*/
-   margin: auto;
-   color: #fff;
+  max-width: 1070px; /*largura máxima do container*/
+  margin: auto;
+  color: #fff;
 }
 .container .rightside {
-   background-image: url("../images/hero.png");
-} 
- header {
-    padding-top: 45px;
+  background-image: url('../images/hero.png');
+}
+header {
+  padding-top: 45px;
 }
 .heroArea {
-      display:flex ;
+  display: flex;
 }
 .heroArea .leftside {
-    flex: 1;
-}   
+  flex: 1;
+}
 .heroArea .leftside h1 {
-      font-weight: bold;
-      font-size: 42px;
-      line-height: 50px;
-      margin: 80px 0 20px 0;   
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 50px;
+  margin: 80px 0 20px 0;
 }
 .heroArea .leftside .subtitle {
-    font-size: 16px;
-    line-height: 23px;
-    color: #999;
-    margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 23px;
+  color: #999;
+  margin-bottom: 20px;
 }
 .heroArea .leftside .form {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .heroArea .leftside .form input {
-    border: 1px solid rgba(255,255,255,0.4);
-    background: transparent;
-    height: 40px;
-    outline: none;
-    color: #FFF;
-    font-size: 14px;
-    width: 300px;
-    padding: 0 , 10px;
- }
-.heroArea .leftside .form button { /*proproedade do botão "cadastrar"*/
-    height: 40px;
-    border: 0;
-    background-color: #0071B7;
-    color: #FFF;
-    font-size: 14px;
-    padding: 0 20px;
-    margin-left: 10px;
-    cursor: pointer; /*Coloca a mão de "clicar" no botão*/
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  height: 40px;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  width: 300px;
+  padding: 0, 10px;
 }
-.heroArea .leftside .form button:hover { /*quando passar o mouse sobre o botão*/
+.heroArea .leftside .form button {
+  /*proproedade do botão "cadastrar"*/
+  height: 40px;
+  border: 0;
+  background-color: #0071b7;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 20px;
+  margin-left: 10px;
+  cursor: pointer; /*Coloca a mão de "clicar" no botão*/
+}
+.heroArea .leftside .form button:hover {
+  /*quando passar o mouse sobre o botão*/
   opacity: 0.7;
 }
 .heroArea .leftside .techs {
@@ -73,15 +78,15 @@ body {
 }
 
 .heroArea .rightside {
-    flex: 1;
-    background-image: url("../images/hero.png");
-    background-size: 100% auto;
+  flex: 1;
+  background-image: url('../images/hero.png');
+  background-size: 100% auto;
 }
 
 /*** SECTION INFO ***/
 .info {
   height: 100px;
-  border-bottom: 2px solid #EAEEF1;
+  border-bottom: 2px solid #eaeef1;
   display: flex; /*ficar um lado do outro*/
   justify-content: center; /*itens centralizados*/
   align-items: center; /*centraliza verticalmente*/
@@ -89,35 +94,181 @@ body {
 .info--text {
   font-size: 20px;
   font-weight: bold;
-  color: #C2C8CB;
+  color: #c2c8cb;
   margin: 0 10px; /*espaçamento nas laterais entre os itens*/
 }
-.info--circle{
+.info--circle {
   width: 6px; /*largura*/
   height: 6px; /*altura*/
-  background-color: #C2C8CB;
-  border-radius: 50%;/*borda livre com 50% da área*/
+  background-color: #c2c8cb;
+  border-radius: 50%; /*borda livre com 50% da área*/
   margin: 0 10px;
 }
+
 /*** SECTION INSTRUCTIONS ***/
 .intructions {
 }
 
-.inst-container{
+.inst-container {
   margin: auto;
   max-width: 900px; /*largura máxima*/
   padding: 70px 0; /*espaçamento entre os itens (altura definida) */
 }
 .inst-item {
-
+  border-left: 3px solid #ecf0f3; /*borda no bollet point*/
+  display: flex; /*para ficar inst-cicle e inst-text lado a lado*/
 }
 .inst-circle {
+  border-radius: 50%; /*arredondar item (circulo)*/
+  width: 17px; /*largura*/
+  height: 17px; /*altura*/
+  background-color: #0071b7;
+  margin-left: -9px; /*empurrar margem da bolinha para a esquerda mais ou menos a metade do tamanho dela*/
+}
+.inst-text {
+  flex: 1; /*pegar todo espaço disponível*/
+  margin-left: 50px; /*empurrar borda para a esquerda*/
+}
+.inst-text h2 {
+  /*texto h2 dentro do inst-text (corpo da página)*/
+  font-size: 32px;
+  color: #000;
+  margin: -10px 0 20px 0; /* -10px alinha o texto com a bolinha*/
+}
+.inst-text p {
+  /*texto parágrafo dentro do inst-text (corpo da página)*/
+  font-size: 16px;
+  line-height: 23px; /*espaçamento entre as linha*/
+  color: #777; /*preferido deixar uma cor definida com # no lugar de rgba*/
+  margin-bottom: 70px;
+}
+.inst-item:last-child {
+  border: 0; /*ultimo item da lista fica sem borda*/
+}
+.inst-item:last-child p {
+  margin: 0; /*ultimo item do paragrafro fica sem margem*/
+}
+/*** SECTION CTA (Call to Actions ou chamada para ação do usuario) ***/
+.cta {
+  background-color: #1d2437;
+  border-bottom: 2px solid #333;
+}
+.cta-container {
+  margin: auto;
+  max-width: 800px; /*largura máxima*/
+  display: flex; /*faz com que o esquerdo e direito fiquem um ao lado do outro */
+  padding: 100px 0; /*espaço na altura do containet e laterais 0*/
+  color: #FFF;
+}
+.cta-left {
+  flex: 1;
+  margin-right: 30px;
+}
+.cta-right {
+  flex: 1;
+  margin-left: 30px;
+}
+.ctat-left h2 {
+  font-size: 40px;
+  margin: 0;
+}
+.cta-left p {
+  font-size: 18px;
+  line-height: 25px;
+  color: #777;
+}
+.cta-right input {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  height: 40px;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  width: 100%; /* para ficar um embaixo do outro */
+  padding: 0 10px;
+  margin-bottom: 20px; /*espaço a baixo do input*/
+}
+.cta-right button {
+  height: 40px;
+  border: 0;
+  background-color: #0071b7;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 20px;
+  cursor: pointer; /*Coloca a mão de "clicar" no botão*/
+  width: 100%;
+  /*margin-top: 20pt; ou espaço a cima do button (usei espaço a baixo do input usando margin-bottom) */
+}
+.cta-right button:hover {
+  /*quando passar o mouse sobre o botão*/
+  opacity: 0.7;
+}
 
+/*** FOOTER ***/
+footer { /*rodapé*/
+  background-color: #1D2437;
+  color: #FFF;
 }
-.inst-text{
-  
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 40px 0;
+  max-width: 1070px;
 }
-footer{
-  background-color: #999;
-  height: 300px;
+.footer-right {
+  font-size: 16px;
+  color: #777;
+  text-align: right;
+  line-height: 25px;
+}
+.footer-right a {
+  color: #777;
+  text-decoration: none;
+}
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+/*** RESPONSIVIDADE ***/
+@media (max-width: 1030px) {
+  .main .container {
+    padding: 0 20px;
+  }
+  footer .footer-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 900px) {
+.heroArea {
+    flex-direction: column-reverse;
+}
+.heroArea .rightside {
+  height: 400px;
+  flex: none;
+  background-size: auto 100%;
+  background-position-x: center;
+}
+.heroArea .rightside .rightside-linear {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, #1D2437 8.92%, rgba(29, 36, 55, 0) 65.85%);
+}
+.heroArea .leftside h1 {
+  margin-top: 0;
+}
+.cta .cta-left {
+  text-align: center;
+  margin-bottom: 30px;
+}
+footer .footer-container {
+  flex-direction: column;
+}
+footer .footer-left{
+  margin-bottom: 30px;;
+}
+footer .footer-right {
+  text-align: center;
+  }
 }
